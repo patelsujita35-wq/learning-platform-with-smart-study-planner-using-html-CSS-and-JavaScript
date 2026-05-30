@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Planner</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7fc;
+    margin:0;
+}
+
+nav{
+    background:#2563eb;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+.container{
+    width:80%;
+    max-width:600px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+ul{
+    margin-top:20px;
+}
+
+li{
+    background:#e8f0fe;
+    padding:10px;
+    margin:8px 0;
+    border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="planner.html">Study Planner</a>
+    <a href="progress.html">Progress</a>
+    <a href="notes.html">Notes</a>
+</nav>
+
+<div class="container">
+    <h1>Smart Study Planner</h1>
+
+    <input type="text" id="subject" placeholder="Enter Subject">
+
+    <input type="date" id="date">
+
+    <input type="time" id="time">
+
+    <button onclick="addPlan()">Add Study Plan</button>
+
+    <ul id="planList"></ul>
+</div>
+
+<script>
+function addPlan(){
+
+    let subject =
+    document.getElementById("subject").value;
+
+    let date =
+    document.getElementById("date").value;
+
+    let time =
+    document.getElementById("time").value;
+
+    if(subject === ""){
+        alert("Please enter subject");
+        return;
+    }
+
+    let li = document.createElement("li");
+
+    li.innerHTML =
+    "<b>" + subject + "</b> | " +
+    date + " | " + time;
+
+    document.getElementById("planList")
+    .appendChild(li);
+}
+</script>
+
+</body>
+</html>
