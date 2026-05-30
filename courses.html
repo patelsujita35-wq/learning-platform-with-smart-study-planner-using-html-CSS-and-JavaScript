@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7fc;
+    margin:0;
+}
+
+nav{
+    background:#2563eb;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+h1{
+    text-align:center;
+    margin:30px 0;
+}
+
+.course-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.card{
+    width:300px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
+}
+
+.card p{
+    padding:0 10px 15px;
+}
+
+.btn{
+    display:block;
+    text-align:center;
+    background:#2563eb;
+    color:white;
+    padding:10px;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="planner.html">Study Planner</a>
+    <a href="progress.html">Progress</a>
+    <a href="notes.html">Notes</a>
+</nav>
+
+<h1>Available Courses</h1>
+
+<div class="course-container">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+        <h3>Web Development</h3>
+        <p>HTML, CSS and JavaScript fundamentals.</p>
+        <a href="#" class="btn">Enroll Now</a>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+        <h3>Python Programming</h3>
+        <p>Learn Python from beginner to advanced.</p>
+        <a href="#" class="btn">Enroll Now</a>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+        <h3>Data Science</h3>
+        <p>Explore AI, ML and Data Analysis
